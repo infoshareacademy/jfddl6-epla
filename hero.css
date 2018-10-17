@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+.section-hero{
+position: relative;
+background-color: #345;
+height: 200px;
+width: 100%;
+background-image: url(img/hero-background-image.jpg);
+background-position: bottom;
+background-size: cover;
+}
+
+.section-hero h1 {
+position: absolute;
+left: 50%;
+top: 35%;
+transform: translate(-50%,-50%);
+
+
+}
+
+.section-hero p {
+font-size: 20px;
+color: greenyellow;
+position: absolute;
+left: 50%;
+top: 65%;
+transform: translate(-50%,-50%);
+text-align: center;
+
+}
