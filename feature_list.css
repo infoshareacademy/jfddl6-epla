@@ -1,1 +1,21 @@
 /*french palette */ 
+.section-features{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.section-features__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 60%;
+}
+
+.section-features__container--pairing {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15%;
+    justify-content: center;
+    
+}
