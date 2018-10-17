@@ -1,18 +1,30 @@
 .main-nav{
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    background-color: black;
+    padding: 0 15px;
 }
+
+.main-nav__logo{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    max-width: 8%;
+    min-width: 70px;
+}
+
 .navigation{
-    border: 1px solid #0c2461;
-    padding: 30px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     flex-wrap: wrap;
+    flex-grow: 5;
 }
 
 .links{
     text-decoration: none;
-    color: #0c2461;
+    color: #82ccdd;
 }
 
 .links:visited{
@@ -20,7 +32,7 @@
 }
 
 .links:hover{
-    color: #6a89cc;
+    color: #f6b93b;
 }
 
 .navigation__element{
@@ -31,24 +43,30 @@
 }
 
 @media only screen and (max-width: 767px){
-    .navigation{
-        flex-flow: column;
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
     }
+    
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
     .navigation__element{
         margin: 5px auto;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .navigation{
-        justify-content: center;
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-@media only screen and (min-width: 992px) {
-
-}
-
-@media only screen and (min-width: 1200px) {
-
+    .navigation{
+        justify-content: space-between;
+        padding-left: 0;
+    }    
 }
