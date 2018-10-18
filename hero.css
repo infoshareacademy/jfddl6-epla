@@ -6,74 +6,108 @@
     box-sizing: border-box;
 }
 
-@media (min-width: 1200px) { 
-    .section-hero{
-        position: relative;
-        background-color: #345;
-        height: 35vh;
-        width: 100%;
-        background-image: url(img/hero-background-image.jpg);
-        background-position: bottom;
-        background-size: cover;
-        }
-        
+.section-hero{
+    position: relative;
+    background-color: #345;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/hero-background-image.jpg);
+    opacity: 0.85;
+    background-position: 80% bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
 
-    .section-hero h1 {
-        font-family: 'Capriola', sans-serif;
-        position: absolute;
-        left: 50%;
-        top: 43%;
-        transform: translate(-47%,-50%);
-        font-size: 50px;
-        text-align: center;
-        line-height: 140%;
-        text-transform: uppercase;
-        letter-spacing: 10px;
-        word-spacing: 30px;
-        font-weight: bold;
-        color: #0c2461;
-        opacity: 0.9;
-        text-shadow:  0 0 30px #fff, 0 0 30px #fff,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
-        
-        
-        }
-        
-        .section-hero p {
-        font-family: 'Capriola', sans-serif;
-        font-size: 30px;
-        letter-spacing: 3px;
-        position: absolute;
-        left: 50%;
-        top: 80%;
-        transform: translate(-50%,-50%);
-        color: #b71540;
-        text-align: center;
-        line-height: 110%;
-        opacity: 0.9;
-        
-        text-shadow:  0 0 30px #fff, 0 0 30px #fff,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
-        }
+.section-hero-h1 {
+    font-family: 'Capriola', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-70%);
+    font-size: 45px;
+    text-align: center;
+    line-height: 220%;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    word-spacing: 30px;
+    font-weight: bold;
+    color: #0c2461;
+    text-shadow:  0 0 30px #fff, 0 0 30px #fff,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
+    }
 
+.section-hero-p {
+    font-family: 'Capriola', sans-serif;
+    font-size: 30px;
+    width: 80%;
+    letter-spacing: 5px;
+    position: absolute;
+    left: 50%;
+    top: 78%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-align: center;
+    line-height: 120%;
+    text-shadow:  0 0 30px #444, 0 0 30px #444,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
+    }
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+
+    .section-hero-h1 {
+    font-size: 55px;
+    line-height: 180%;
+    }
+
+    .section-hero-p {
+    font-size: 30px;
+    line-height: 130%;
+    top: 75%;
+    }
  }
 
+@media only screen and (min-width: 768px) and (max-width: 991px){
 
-
-
-/* / Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media screen only and (min-width: 576px) { 
-
+    .section-hero-h1 {
+    font-size: 110px;
+    top: 50%;
+    line-height: 180%;
+    letter-spacing: 15px;
+    }
+    .section-hero-p {
+    font-size: 60px;
+    line-height: 160%;
+    }
  }
 
-// Medium devices (tablets, 768px and up)
-@media screen only and (min-width: 768px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
 
+    .section-hero-h1 {
+    font-size: 120px;
+    top: 50%;
+    line-height: 180%;
+    letter-spacing: 30px;
+    }
+
+    .section-hero-p {
+    font-size: 60px;
+    line-height: 160%;
+    top: 75%;
+    letter-spacing: 10px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .section-hero-h1 {
+        font-size: 120px;
+        top: 50%;
+        line-height: 180%;
+        letter-spacing: 30px;
+    }
+
+    .section-hero-p {
+    font-size: 60px;
+    line-height: 160%;
+    top: 75%;
+    letter-spacing: 10px;
+    }
  }
-
-// Large devices (desktops, 992px and up)
-@media screen only and (min-width: 992px) { 
-
- } */
-
