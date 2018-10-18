@@ -4,21 +4,16 @@
 }
 
 .main-nav{
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     background-color: black;
     padding: 0 15px;
     box-sizing: border-box;
     position: fixed;
-    left: 5%;
 }
 
 .main-nav__logo {
-    display: flex;
-    flex-grow: 1;
-    max-width: 100px;
-    max-height: 100px;
+    max-height: 8vw;
 }
 
 .navigation {
@@ -62,8 +57,8 @@
 
     .main-nav__logo {
         justify-content: center;
-        max-width: 70px;
-        height: 70px;
+        max-height: 12vw;
+        margin-top: 8px;
     }
 
     .navigation {
@@ -100,4 +95,9 @@
     .navigation__element {
         font-size: 22px;
     }
+}
+
+@media only screen and (min-width: 1200px){
+    .main-nav__logo {
+        max-height: 6vw;
 }
