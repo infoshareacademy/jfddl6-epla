@@ -2,7 +2,8 @@
 .section-features{
     display: flex;
     justify-content: center;
-    align-content: center;
+    flex-wrap: nowrap;
+    height: 100vh;
 }
 
 .section-features__container{
@@ -10,6 +11,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-basis: 60%;
+    
 }
 
 .section-features__container--pairing {
@@ -17,5 +19,6 @@
     flex-direction: column;
     flex-basis: 15%;
     justify-content: center;
+    align-content: space-between;
     
 }
