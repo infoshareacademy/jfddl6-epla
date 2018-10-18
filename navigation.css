@@ -24,21 +24,21 @@
     flex-grow: 5;
 }
 
-.links {
+.navigation__link {
     text-decoration: none;
     color: #82ccdd;
     display: block;
 }
 
-.links:visited {
+.navigation__link:visited {
     color: #82ccdd;
 }
 
-.links:hover {
+.navigation__link:hover {
     color: #f6b93b;
 }
 
-.links:active {
+.navigation__link:active {
     color: #f6b93b;
 }
 
