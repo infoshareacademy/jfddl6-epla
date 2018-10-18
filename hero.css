@@ -9,11 +9,11 @@
 .section-hero{
     position: relative;
     background-color: #345;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-image: url(img/hero-background-image.jpg);
     opacity: 0.85;
-    background-position: 80% bottom;
+    background-position: 80% 0;
     background-size: cover;
     background-repeat: no-repeat;
     }
@@ -22,7 +22,7 @@
     font-family: 'Capriola', sans-serif;
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 54%;
     transform: translate(-50%,-70%);
     font-size: 45px;
     text-align: center;
@@ -32,25 +32,34 @@
     word-spacing: 30px;
     font-weight: bold;
     color: #0c2461;
+    opacity: 0.95;
     text-shadow:  0 0 30px #fff, 0 0 30px #fff,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
     }
 
 .section-hero-p {
+    position: absolute;
     font-family: 'Capriola', sans-serif;
     font-size: 30px;
     width: 80%;
     letter-spacing: 5px;
-    position: absolute;
     left: 50%;
-    top: 78%;
+    top: 82%;
     transform: translate(-50%, 0);
     color: #fff;
+    opacity: 0.85;
     text-align: center;
     line-height: 120%;
-    text-shadow:  0 0 30px #444, 0 0 30px #444,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
+    text-shadow:  0 0 30px #000, 0 0 30px #000, 0 0 30px #000, 0 0 30px #000, -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
     }
 
 @media only screen and (min-width:576px) and (max-width:767px) {
+
+    .section-hero{
+
+        background-position: 80% 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
 
     .section-hero-h1 {
     font-size: 55px;
@@ -60,7 +69,7 @@
     .section-hero-p {
     font-size: 30px;
     line-height: 130%;
-    top: 75%;
+    top: 85%;
     }
  }
 
@@ -73,7 +82,9 @@
     letter-spacing: 15px;
     }
     .section-hero-p {
-    font-size: 60px;
+    top: 78%;
+    font-size: 50px;
+    
     line-height: 160%;
     }
  }
