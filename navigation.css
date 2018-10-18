@@ -43,6 +43,10 @@
     color: #f6b93b;
 }
 
+.links:active {
+    color: #f6b93b;
+}
+
 .navigation__element {
     list-style-type: none;
     margin: 0 15px;
