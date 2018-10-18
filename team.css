@@ -1,4 +1,5 @@
-.section-team_container{
-    display: flex
-
+#team{
+    display: flex;
+    flex-direction: row;
+    border: 1px;
 }
