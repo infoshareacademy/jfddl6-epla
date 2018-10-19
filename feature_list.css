@@ -1,4 +1,4 @@
-/*french palette */ 
+/*french palette */
 .section-features{
     display: flex;
     justify-content: center;
@@ -6,55 +6,61 @@
     min-height: 90vh;
 }
 @media only screen and (min-width:768px){
-    
+
 .section-features__container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-basis: 80%;
-    
+
 }
 
 .section-features__container--pairing {
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
-    flex-basis: 15%;
-    
+    padding:3%;
 
 }
 
+
+
 .section-features__container--pairing p{
     text-align: center;
-    border: 1px solid red;
-    
+    font-size: 150%;
+    font-family: 'Capriola', sans-serif;
 
 }
 }
 
 @media only screen and (max-width:767px){
     .section-features__container{
-        
+
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         flex-basis: 50%;
+
     }
 
     .section-features__container--pairing {
-        
+        padding:  4%;
         flex-direction: row;
         justify-content: center;
         align-content: space-between;
-        
-        
+
+
+    }
+    .section-features__container--pairing:nth-child(odd){
+        flex-direction: row-reverse;
+
     }
 
     .section-features__container--pairing p{
         display: flex;
-        justify-content: center;
+        margin: 0 0.8rem;
+        text-align: center;
         align-items: center;
-        border: 1px solid red;
-        
+        font-size: 130%;
+        font-family: 'Capriola', sans-serif;
+
     }
 }
