@@ -18,14 +18,24 @@
     width: 50%;
     object-fit: contain;
     border-radius: 10px;
-    margin: 0 10vw 5vh 5vh;
+    margin: 5vh 5vw 5vh 5vh;
 }
 
-.section-learn-more__flex-container__img:nth-of-type(1){
-    margin-top: vh
+.section-learn-more__flex-container__text:nth-of-type(1){
+    margin-top: 5vh
 }
 .section-learn-more__flex-container__text{
+    font-family: 'Capriola', sans-serif;
     flex: 1 1 40%;
     border: 1px solid brown;
     margin: 0 0 10vw 0;
+}
+
+.section-learn-more__flex-container__text__header{
+margin-bottom: 2vh;
+font-size: 2.5vw;
+}
+
+.section-learn-more__flex-container__text__content{
+    font-size: 1.5vw;
 }
