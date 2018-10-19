@@ -6,15 +6,26 @@
 .section-learn-more__flex-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+    object-fit: contain;
     width: 100%;
-    margin: 20px 0;
+    height: 100%;
+
 }
 
 .section-learn-more__flex-container__img{
-    flex: 1 1 20%;
-    height: auto;
+    width: 50%;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 0 10vw 5vh 5vh;
+}
+
+.section-learn-more__flex-container__img:nth-of-type(1){
+    margin-top: vh
 }
 .section-learn-more__flex-container__text{
     flex: 1 1 40%;
+    border: 1px solid brown;
+    margin: 0 0 10vw 0;
 }
