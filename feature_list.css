@@ -24,7 +24,7 @@
 
 
 
-.section-features__container--pairing p{
+.section-features__container--pairing--text{
     text-align: center;
     font-size: 150%;
     font-family: 'Capriola', sans-serif;
@@ -54,7 +54,7 @@
 
     }
 
-    .section-features__container--pairing p{
+    .section-features__container--pairing--text{
         display: flex;
         margin: 0 0.8rem;
         text-align: center;
