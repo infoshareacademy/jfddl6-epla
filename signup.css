@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.section-sign-up{
+    margin: 10px auto;
+    background-color: #0a3d62;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-sign-up__header{
+    color: white;
+    margin: 7px 0 10px 0;
+}
+
+.section-sign-up__no-spam{
+    color: white;
+    margin: 12px 0 8px 0;
+}
+
+.section-sign-up__personal-data{
+    color: white;
+    margin-bottom: 8px;
+}
