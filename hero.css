@@ -22,11 +22,11 @@
     font-family: 'Capriola', sans-serif;
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 70%;
     transform: translate(-50%,-70%);
     font-size: 45px;
     text-align: center;
-    line-height: 220%;
+    line-height: 150%;
     text-transform: uppercase;
     letter-spacing: 10px;
     word-spacing: 30px;
@@ -65,6 +65,9 @@
  }
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
+    .section-hero{
+    background-position: 80% bottom;
+    }
 
     .section-hero-h1 {
     font-size: 110px;
