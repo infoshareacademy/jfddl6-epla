@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.order{
+    order: -1;
+    text-align: right;
+}
 
 .section-learn-more__flex-container{
     display: flex;
@@ -28,4 +32,4 @@
     flex: 1 1 40%;
     border: 1px solid brown;
     margin: 0 0 10vw 0;
-}
+git }
