@@ -36,13 +36,12 @@
 }
 
 .section-learn-more__flex-container__text__headline{
-font-size: 2vw;
-margin-bottom: 2vh;
-line-height: 160%
+font-size: 3vw;
+margin-bottom: 1vh;
 }
 
 .section-learn-more__flex-container__text__content{
-    font-size: 1.5vw;
+    font-size: 2vw;
     line-height: 140%;
 
 }
