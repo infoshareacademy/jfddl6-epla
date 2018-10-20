@@ -32,15 +32,17 @@
     font-family: 'Capriola', sans-serif;
     flex: 1 1 40%;
     border: 1px solid brown;
-    margin: 3vh 2vw 3vh 2vw;
+    margin: 3vh 2vw 3vh 2vw; 
 }
 
 .section-learn-more__flex-container__text__headline{
 font-size: 2vw;
 margin-bottom: 2vh;
+line-height: 160%
 }
 
 .section-learn-more__flex-container__text__content{
     font-size: 1.5vw;
+    line-height: 140%;
 
 }
