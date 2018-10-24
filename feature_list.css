@@ -1,14 +1,65 @@
-/*french palette */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header__section-features{
+    display: flex;
+    color:white;
+    opacity: 0.7;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; /*możesz zmieniać jeszcze*/
+    padding: 2%;
+    background-color: #3c6382;
+}
+.header__text{
+    font-size: 2.3rem;
+    text-align: center;
+    font-family: 'Capriola', 'sans-serif';
+}
 .section-features{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: nowrap;
-    min-height: 90vh;
+    min-height: 50vh; 
+    flex-direction: row;
+    background-color: #3c6382;
 }
+.section-features__container{
+    border: 1px solid white;
+    padding: 4%;
+    border-radius: 5%;
+    background-color: white;
+    opacity: 0.7;
+}
+
+/*french palette 
+.section-features{
+    
+}
+
+.header__section-features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+.header__section-features-header{
+    font-size: 2.3rem;
+    text-align: center;
+    font-family: 'Capriola', 'sans-serif';
+}
+
 @media only screen and (min-width:768px){
 
 .section-features__container{
     display: flex;
+    justify-content: center;
+    align-content: space space-between;
+    flex-wrap: nowrap;
+    min-height: 90vh;
     flex-direction: row;
     flex-basis: 80%;
 
@@ -17,14 +68,14 @@
 .section-features__container--pairing {
     flex-direction: column;
     justify-content: center;
-    align-content: space-between;
+    align-items: center;
     padding:3%;
 
 }
 
 
 
-.section-features__container--pairing--text{
+.section-features__container-text{
     text-align: center;
     font-size: 150%;
     font-family: 'Capriola', sans-serif;
@@ -45,7 +96,7 @@
         padding:  4%;
         flex-direction: row;
         justify-content: center;
-        align-content: space-between;
+        align-content: center;
 
 
     }
@@ -54,13 +105,12 @@
 
     }
 
-    .section-features__container--pairing--text{
-        display: flex;
+    .section-features__container-text{
         margin: 0 0.8rem;
         text-align: center;
-        align-items: center;
         font-size: 130%;
-        font-family: 'Capriola', sans-serif;
+        font-family: 'Capriola', 'sans-serif';
 
     }
 }
+*/
