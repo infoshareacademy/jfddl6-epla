@@ -7,7 +7,7 @@
     width: 100%;
     display: flex;
     background-color: black;
-    padding: 0 15px;
+    padding: 5px 15px;
     box-sizing: border-box;
     position: fixed;
     z-index: 1;
@@ -17,6 +17,9 @@
     max-height: 8vw;
 }
 
+.main-nav__toggle{
+    display: none;
+}
 
 .navigation {
     display: flex;
@@ -63,10 +66,28 @@
         margin-top: 8px;
     }
 
+    .main-nav__toggle{
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        max-height: 14vw;
+        margin-top: 8px;
+    }
+
+    .main-nav__hamburger-logo{
+        max-height: 14vw;
+    }
+
     .navigation {
         flex-direction: column;
         align-items: center;
         padding-left: 0;
+        overflow: hidden;
+    }
+
+    .main-nav__navigation--collapsed{
+        height: 0;
     }
 
     .navigation__element {
