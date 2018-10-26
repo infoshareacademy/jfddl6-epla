@@ -17,7 +17,7 @@
     opacity: 0.85;
     }
 
-.section-hero-h1 {
+.section-hero__main-title {
     font-family: 'Capriola', sans-serif;
     position: absolute;
     left: 50%;
@@ -35,7 +35,7 @@
     text-shadow:  0 0 30px #fff, 0 0 30px #fff,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
     }
 
-.section-hero-p {
+.section-hero__additional-text {
     font-family: 'Capriola', sans-serif;
     position: absolute;
     width: 80%;
@@ -53,12 +53,12 @@
 
 @media only screen and (min-width:576px) {      
 
-    .section-hero-h1 {
+    .section-hero__main-title {
     font-size: 55px;
     line-height: 180%;
     }
 
-    .section-hero-p {
+    .section-hero__additional-text {
     font-size: 30px;
     line-height: 130%;
     }
@@ -66,12 +66,12 @@
 
 @media only screen and (min-width: 768px) {
 
-    .section-hero-h1 {
+    .section-hero__main-title {
     font-size: 110px;
     top: 50%;
     letter-spacing: 15px;
     }
-    .section-hero-p {
+    .section-hero__additional-text {
     font-size: 50px;
     line-height: 160%;
     }
@@ -79,12 +79,12 @@
 
 @media only screen and (min-width: 992px) {
 
-    .section-hero-h1 {
+    .section-hero__main-title {
     font-size: 120px;
     letter-spacing: 30px;
     }
 
-    .section-hero-p {
+    .section-hero__additional-text {
     font-size: 60px;
     top: 80%;
     letter-spacing: 10px;
@@ -93,7 +93,7 @@
 
 @media only screen and (min-width: 1200px) {
 
-    .section-hero-p {
+    .section-hero__additional-text {
     top: 75%;
     }
  }
