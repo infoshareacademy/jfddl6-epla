@@ -7,11 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Capriola&amp;subset=latin-ext" rel="stylesheet">
     <title>ePla</title>
-    <link rel="stylesheet" href="hero.css">
-    <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="navigation.css">
-    <link href="navigation.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="additional-information.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/additional-information.css">
 </head>
 
 <body>
@@ -20,13 +19,12 @@
             <img src="img/logo.png" alt="logo" class="main-nav__logo">
             <a href="#" class="main-nav__toggle"><img src="img/hamburger-logo.png" alt="logo" class="main-nav__hamburger-logo" ></a>
         </div>
-        <ul class="main-nav__navigation navigation">
-            <li class="navigation__element"><a class="navigation__link" href="#hero">Home</a></li>
-            <li class="navigation__element"><a class="navigation__link" href="#features">Features</a></li>
-            <li class="navigation__element"><a class="navigation__link" href="#learn-more">Learn more</a></li>
-            <li class="navigation__element"><a class="navigation__link" href="#team">Team</li></a>
-            <li class="navigation__element"><a class="navigation__link" href="#contact">Contact us</a></li>
-            <li class="navigation__element"><a class="navigation__link" href="#sign-up">Sign-up</a></li>
+        <ul class="main-nav__navigation main-menu">
+            <li class="main-menu__element"><a class="main-menu__link" href="#hero">Home</a></li>
+            <li class="main-menu__element"><a class="main-menu__link" href="#features">Features</a></li>
+            <li class="main-menu__element"><a class="main-menu__link" href="#learn-more">Learn more</a></li>
+            <li class="main-menu__element"><a class="main-menu__link" href="#team">Team</li></a>
+            <li class="main-menu__element"><a class="main-menu__link" href="#sign-up">Sign-up</a></li>
         </ul>
     </nav>
 
@@ -123,22 +121,13 @@
 
     <section id="sign-up" class="sections section-sign-up">
         <h3 class="section-sign-up__header">If you're interested in our application, you can leave us your email address and we will let you know when our application is published.</h3>
-        <form action="https://emaillabs-sender.herokuapp.com/" method="POST" class="form">
-            <input type="text" name="emails[]" placeholder="Enter your email address" class="form__input-email">
-            <input type="hidden" name="subject" value="Tytuł">
-            <input type="hidden" name="message" value="Treść">
-            <input type="hidden" name="from" value="mateusz.choma@infoshareacademy.com">
-            <input type="hidden" name="fromName" value="Nazwa Apki">
-            <input type="hidden" name="redirect" value="https://google.com">
-            <input class="button form__input-submit" type="submit" value="Send!">
+        <form action="https://emaillabs-sender.herokuapp.com/" method="POST" class="newsletter-form">
+
         </form>
-        <p class="section-sign-up__no-spam">Don't worry we won't send you any unwanted spam. We'll send you just one email, informing you about app's premiere.</p>
+        <p class="section-sign-up__no-spam">Don't worry we won't send you any unwanted spam. We'll only send you one email confirming your sign up and one informing you about app's premiere.</p>
         <p class="section-sign-up__personal-data">Your personal data is save with us. We won't give your email address to anyone else.</p>
     </section>
 
-    <section id="contact" class="sections section-contact">
-
-    </section>
     <script src="script.js"></script>
 </body>
 

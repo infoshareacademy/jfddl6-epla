@@ -21,11 +21,11 @@
     margin: 7px 0 10px 0;
 }
 
-.form{
+.newsletter-form{
     width: 100%;
 }
 
-.form__input-email{
+.newsletter-form__input-email{
     width: 100%;
     max-width: 400px;
     background-clip: padding-box;
@@ -36,11 +36,11 @@
     line-height: 1.25;
 }
 
-.form__input-email{
+.newsletter-form__input-email{
     outline: none;
 }
 
-.form__input-submit{
+.newsletter-form__input-submit{
     width: 100%;
     max-width: 200px;
     padding: 0.5rem 0.75rem;
@@ -53,11 +53,11 @@
     line-height: 1.25;
 }
 
-.form__input-submit:hover{
+.newsletter-form__input-submit:hover{
     color: #82ccdd;
 }
 
-.form__input-submit:focus{
+.newsletter-form__input-submit:focus{
     outline: none;
 }
 
@@ -72,7 +72,7 @@
 }
 
 @media only screen and (max-width: 767px){
-    .form__input-submit{
+    .newsletter-form__input-submit{
         margin-top: 3%;
         max-width: 250px;
     }
