@@ -7,8 +7,6 @@
 }
 
 .section-hero{
-    position: relative;
-    top: 0;
     min-height: 100vh;
     background-image: url(img/hero-background-image.jpg);
     background-position: 80% 0;
@@ -17,15 +15,21 @@
     opacity: 0.85;
     }
 
-.section-hero__main-title {
+.section-hero__flex-container{
+    padding: 20vh 0 0 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-hero__flex-container__header {
     font-family: 'Capriola', sans-serif;
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%,-70%);
-    font-size: 50px;
+    font-size: 200%;
     text-align: center;
-    line-height: 150%;
+    line-height: 170%;
     text-transform: uppercase;
     letter-spacing: 10px;
     word-spacing: 30px;
@@ -35,65 +39,53 @@
     text-shadow:  0 0 30px #fff, 0 0 30px #fff,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
     }
 
-.section-hero__additional-text {
+.section-hero__flex-container__content {
     font-family: 'Capriola', sans-serif;
-    position: absolute;
     width: 80%;
-    left: 50%;
-    top: 81%;
-    transform: translate(-50%, 0);
-    font-size: 28px;
+    font-size: 150%;
     text-align: center;
     line-height: 120%;
     letter-spacing: 5px;
     color: #fff;
-    opacity: 0.85;
+    opacity: 0.9;
     text-shadow:  0 0 30px #000, 0 0 30px #000, 0 0 30px #000, 0 0 30px #000, -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
     }
 
-@media only screen and (min-width:576px) {      
-
-    .section-hero__main-title {
-    font-size: 55px;
-    line-height: 180%;
-    }
-
-    .section-hero__additional-text {
-    font-size: 30px;
-    line-height: 130%;
-    }
- }
-
 @media only screen and (min-width: 768px) {
 
-    .section-hero__main-title {
-    font-size: 110px;
-    top: 50%;
-    letter-spacing: 15px;
+    .section-hero__flex-container__header {
+        font-size: 300%;
+        letter-spacing: 15px;
     }
-    .section-hero__additional-text {
-    font-size: 50px;
-    line-height: 160%;
+
+    .section-hero__flex-container__content {
+        font-size: 200%;
+        line-height: 160%;
     }
  }
 
 @media only screen and (min-width: 992px) {
 
-    .section-hero__main-title {
-    font-size: 120px;
-    letter-spacing: 30px;
+    .section-hero__flex-container__header {
+        font-size: 400%;
+        letter-spacing: 30px;
     }
 
-    .section-hero__additional-text {
-    font-size: 60px;
-    top: 80%;
-    letter-spacing: 10px;
+    .section-hero__flex-container__content {
+        font-size: 300%;
+        letter-spacing: 10px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
 
-    .section-hero__additional-text {
-    top: 75%;
+    .section-hero__flex-container__header {
+        font-size: 500%;
+        letter-spacing: 30px;
+        }
+
+    .section-hero__flex-container__content {
+        font-size: 400%;
+        letter-spacing: 10px;
+        }
     }
- }
