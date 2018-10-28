@@ -7,7 +7,7 @@
     width: 100%;
     display: flex;
     background-color: black;
-    padding: 0 15px;
+    padding: 5px 15px;
     box-sizing: border-box;
     position: fixed;
     z-index: 1;
@@ -17,8 +17,11 @@
     max-height: 8vw;
 }
 
+.main-nav__toggle{
+    display: none;
+}
 
-.navigation {
+.main-menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -26,25 +29,25 @@
     flex-grow: 5;
 }
 
-.navigation__link {
+.main-menu__link {
     text-decoration: none;
     color: #82ccdd;
     display: block;
 }
 
-.navigation__link:visited {
+.main-menu__link:visited {
     color: #82ccdd;
 }
 
-.navigation__link:hover {
+.main-menu__link:hover {
     color: #f6b93b;
 }
 
-.navigation__link:active {
+.main-menu__link:active {
     color: #f6b93b;
 }
 
-.navigation__element {
+.main-menu__element {
     list-style-type: none;
     margin: 0 15px;
     font-family: 'Capriola', sans-serif;
@@ -57,19 +60,44 @@
         align-items: center;
     }
 
+    .main-nav__flex-container{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .main-nav__logo {
         justify-content: center;
         max-height: 14vw;
-        margin-top: 8px;
     }
 
-    .navigation {
+    .main-nav__toggle{
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        max-height: 14vw;
+    }
+
+    .main-nav__hamburger-logo{
+        max-height: 14vw;
+    }
+
+    .main-menu {
         flex-direction: column;
         align-items: center;
         padding-left: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
     }
 
-    .navigation__element {
+    .main-nav__navigation--collapsed{
+        max-height: 0 !important;
+    }
+
+    .main-menu__element {
         margin: 5px auto;
         font-size: 20px;
         font-weight: bold;
@@ -89,12 +117,12 @@
         justify-content: center;
     }
 
-    .navigation {
+    .main-menu {
         justify-content: space-between;
         padding-left: 0;
     }
 
-    .navigation__element {
+    .main-menu__element {
         font-size: 21px;
     }
 }
