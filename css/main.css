@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 .main-nav{
     width: 100%;
     display: flex;
@@ -73,7 +72,7 @@
     justify-content: space-around;
 }
 
-.section-hero__flex-container__header {
+.section-hero__flex-container-header {
     font-family: 'Capriola', sans-serif;
     font-size: 200%;
     text-align: center;
@@ -87,7 +86,7 @@
     text-shadow:  0 0 30px #fff, 0 0 30px #fff,  -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
     }
 
-.section-hero__flex-container__content {
+.section-hero__flex-container-text {
     font-family: 'Capriola', sans-serif;
     width: 80%;
     font-size: 150%;
@@ -157,14 +156,14 @@
         padding: 5vh 5vw;
     }
     
-    .section-learn-more__flex-container__img{
+    .section-learn-more__flex-container-img{
         width: 96%;
         object-fit: contain;
         border-radius: 10px;
         margin: 1vw 0;
     }
     
-    .section-learn-more__flex-container__text{
+    .section-learn-more__flex-container-text{
         font-family: 'Capriola', sans-serif;
         background-color: #fff;
         opacity: 0.7;   
@@ -173,14 +172,14 @@
         border-radius: 10px; 
     }
     
-    .section-learn-more__flex-container__text__headline{
+    .section-learn-more__flex-container-headline{
         margin-bottom: 3vw;
         font-size: 7vw;
         text-align: center;
     }
     
     
-    .section-learn-more__flex-container__text__content{
+    .section-learn-more__flex-container-content{
         font-size: 5vw;
         line-height: 150%;
         text-align: justify;
@@ -249,11 +248,11 @@
 
     @media only screen and (min-width:576px) { 
 
-        .section-learn-more__flex-container__text__headline{
+        .section-learn-more__flex-container-headline{
             font-size: 6vw;
         }
         
-        .section-learn-more__flex-container__text__content{
+        .section-learn-more__flex-container-content{
             font-size: 4.5vw;
             line-height: 140%;
             text-align: justify;
@@ -478,19 +477,19 @@
     }
 
     .newsletter-form__input-submit{
-        margin-top: 3%;
+        margin-top: 3%;git 
         max-width: 250px;
     }
 }
 
 @media only screen and (min-width: 768px) {
 
-    .section-hero__flex-container__header {
+    .section-hero__flex-container-header {
         font-size: 300%;
         letter-spacing: 15px;
     }
 
-    .section-hero__flex-container__content {
+    .section-hero__flex-container-text {
         font-size: 200%;
         line-height: 160%;
     }
@@ -502,26 +501,26 @@
         padding: 20px 5vw;
     }
 
-    .section-learn-more__flex-container__img{
+    .section-learn-more__flex-container-img{
         width: 47%;
         margin: 3vh 2vw;
     }
 
-    .section-learn-more__flex-container__text{
+    .section-learn-more__flex-container-text{
         padding: 1vw 2vw 2vw 2vw;
     }
 
-    .section-learn-more__flex-container__text__headline{
+    .section-learn-more__flex-container-headline{
         margin-bottom: 1vw;
         font-size: 3.5vw;
     }
     
-    .section-learn-more__flex-container__text__content{
+    .section-learn-more__flex-container-content{
         font-size: 2.5vw;
         line-height: 170%;
     }
 
-    .section-learn-more__flex-container:nth-of-type(odd)>.section-learn-more__flex-container__text{
+    .section-learn-more__flex-container:nth-of-type(odd)>.section-learn-more__flex-container-text{
         order: -1;
         text-align: right;
     }
@@ -549,21 +548,21 @@
 
 @media only screen and (min-width: 992px) {
 
-    .section-hero__flex-container__header {
+    .section-hero__flex-container-header {
         font-size: 400%;
         letter-spacing: 30px;
     }
 
-    .section-hero__flex-container__content {
+    .section-hero__flex-container-text {
         font-size: 300%;
         letter-spacing: 10px;
     }
 
-    .section-learn-more__flex-container__text__headline{
+    .section-learn-more__flex-container-headline{
         font-size: 3vw;
     }
     
-    .section-learn-more__flex-container__text__content{
+    .section-learn-more__flex-container-content{
         font-size: 2vw;
         line-height: 140%;
     }
@@ -573,20 +572,20 @@
     .main-nav__logo {
         max-height: 6vw;
     }
-    .section-hero__flex-container__header {
+    .section-hero__flex-container-header {
         font-size: 500%;
         letter-spacing: 30px;
         }
 
-    .section-hero__flex-container__content {
+    .section-hero__flex-container-text {
         font-size: 400%;
         letter-spacing: 10px;
     }
-        .section-learn-more__flex-container__text__headline{
+        .section-learn-more__flex-container-headline{
             font-size: 2vw;
     }
         
-        .section-learn-more__flex-container__text__content{
+        .section-learn-more__flex-container-content{
             font-size: 1.5vw;
     }
 }
