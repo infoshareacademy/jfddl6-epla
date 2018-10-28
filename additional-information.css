@@ -23,7 +23,7 @@
     margin: 1vw 0;
 }
 
-.section-learn-more__flex-container__text{
+.section-learn-more__flex-container-text{
     font-family: 'Capriola', sans-serif;
     background-color: #fff;
     opacity: 0.7;   
@@ -32,13 +32,13 @@
     border-radius: 10px; 
 }
 
-.section-learn-more__flex-container__text__headline{
+.section-learn-more__flex-container-text__headline{
     margin-bottom: 3vw;
     font-size: 7vw;
     text-align: center;
 }
 
-.section-learn-more__flex-container__text__content{
+.section-learn-more__flex-container-text__content{
     font-size: 5vw;
     line-height: 150%;
     text-align: justify;
@@ -46,11 +46,11 @@
 
 @media only screen and (min-width:576px) { 
 
-    .section-learn-more__flex-container__text__headline{
+    .section-learn-more__flex-container-text__headline{
         font-size: 6vw;
     }
     
-    .section-learn-more__flex-container__text__content{
+    .section-learn-more__flex-container-text__content{
         font-size: 4.5vw;
         line-height: 140%;
         text-align: justify;
@@ -71,21 +71,21 @@
         margin: 3vh 2vw;
     }
 
-    .section-learn-more__flex-container__text{
+    .section-learn-more__flex-container-text{
         padding: 1vw 2vw 2vw 2vw;
     }
 
-    .section-learn-more__flex-container__text__headline{
+    .section-learn-more__flex-container-text__headline{
         margin-bottom: 1vw;
         font-size: 3.5vw;
     }
     
-    .section-learn-more__flex-container__text__content{
+    .section-learn-more__flex-container-text__content{
         font-size: 2.5vw;
         line-height: 170%;
     }
 
-    .section-learn-more__flex-container:nth-of-type(odd)>.section-learn-more__flex-container__text{
+    .section-learn-more__flex-container:nth-of-type(odd)>.section-learn-more__flex-container-text{
         order: -1;
         text-align: right;
     }
@@ -93,11 +93,11 @@
 
 @media only screen and (min-width: 992px) {
 
-    .section-learn-more__flex-container__text__headline{
+    .section-learn-more__flex-container-text__headline{
         font-size: 3vw;
     }
     
-    .section-learn-more__flex-container__text__content{
+    .section-learn-more__flex-container-text__content{
         font-size: 2vw;
         line-height: 140%;
     }
@@ -105,11 +105,11 @@
 
 @media only screen and (min-width: 1200px){
 
-    .section-learn-more__flex-container__text__headline{
+    .section-learn-more__flex-container-text__headline{
         font-size: 2vw;
     }
     
-    .section-learn-more__flex-container__text__content{
+    .section-learn-more__flex-container-text__content{
         font-size: 1.5vw;
     }
 }
