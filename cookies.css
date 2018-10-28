@@ -28,7 +28,7 @@
 }
 
 .cookies__content {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     font-size: 14px;
     color: #afb4bc;
     line-height: 1.5em;
@@ -39,7 +39,7 @@
     display: block;
     position: fixed;
     right: 40px;
-    bottom: 15px;
+    bottom: 10px;
     width: 110px;;
     height: 40px;
     padding: 12px 10px;
