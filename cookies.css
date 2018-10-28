@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.section-cookies {
+.cookies {
     font-family: Capriola, sans-serif;
     width: 100vw;
     position: fixed;
@@ -19,7 +19,7 @@
     /* z-index: 1000; */
 }
 
-.section-cookies__headline {
+.cookies__headline {
     text-align: center;
     font-size: 16px;
     font-weight: bold;
@@ -28,14 +28,14 @@
     margin-bottom: 7px;
 }
 
-.section-cookies__content {
+.cookies__content {
     padding-bottom: 20px;
     font-size: 14px;
     color: #afb4bc;
     line-height: 1.5em;
 }
 
-.section-cookies__button{
+.cookies__button{
     font-family: Capriola, sans-serif;
     display: block;
     position: fixed;
@@ -54,6 +54,6 @@
     text-align: center;
 }
 
-.section-cookies__button:hover {
+.cookies__button:hover {
     background-color: #ff7925;
 }
