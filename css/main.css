@@ -98,6 +98,15 @@
     text-shadow:  0 0 30px #000, 0 0 30px #000, 0 0 30px #000, 0 0 30px #000, -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
     }
 
+.section-hero-slider{
+    position: relative;
+}
+
+.section-hero-slider__image{
+    position: absolute;
+    width: 100vw;
+}
+
     .section-features__header{
         display: flex;
         color:white;

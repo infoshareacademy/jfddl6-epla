@@ -1,6 +1,5 @@
 
 const carousel = function (){
-    alert('Hi there');
     const slider = document.querySelector('.section-features__header');
 }
 
