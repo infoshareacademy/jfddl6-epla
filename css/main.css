@@ -245,15 +245,13 @@
     .thank-you-flex-container{
         display: flex;
         justify-content: center;
+        align-items: center;
         margin-top: 5%;
-        width: 90%;
-        height: 80%;
-
     }
 
     .thank-you-image{
-        max-width: auto;
-        max-height: 80%;
+        width: auto;
+        height: 70vh;
     }
 
     @media only screen and (min-width:576px) {
@@ -335,7 +333,6 @@
 
     .cookies {
         font-family: Capriola, sans-serif;
-        width: 100vw;
         position: fixed;
         font-size: 12px;
         font-family: Arial, Verdana, sans-serif;
