@@ -425,8 +425,8 @@
         align-items: center;
         padding-left: 0;
         overflow: hidden;
-        transition: max-height 0.5s ease-in-out;
-        max-height: 750px;
+        transition: max-height 0.5s ease;
+        max-height: 200px;
     }
 
     .main-nav__navigation--collapsed{
