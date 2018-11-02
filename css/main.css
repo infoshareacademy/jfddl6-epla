@@ -186,6 +186,80 @@
         text-align: justify;
     }
 
+    .calculator-wrapper {
+        width: 70%;
+        margin: 50px auto 0;
+        padding: 40px 30px;
+        border: 1px solid #000;
+    }
+
+    .calculator-wrapper__title {
+        text-transform: capitalize;
+        margin: 0 0 40px;
+    }
+
+    .calculator__row {
+        display: flex;
+        align-items: center;
+        margin: 0 0 30px;
+    }
+
+    .calculator__row:last-child {
+        margin-bottom: 0;
+    }
+
+    .calculator__row label {
+        font-weight: 700;
+    }
+
+    .number-of-accounts {
+        justify-content: space-between;
+    }
+
+    .calculator__number {
+        width: 70%;
+        height: 15px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    .calculator__number:hover {
+        opacity: 1;
+    }
+
+    .calculator__number::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+    .calculator__number::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+    .account-type{
+        display: block;
+    }
+
+    .calculator__info {
+        text-transform: capitalize;
+        margin: 0;
+    }
+
     .section-team-header{
         display: flex;
         justify-content: center;
@@ -193,9 +267,9 @@
         font-size: 2.3rem;
         margin:0;
         color:white;
-       opacity: 0.7;
-       padding: 2%;
-       background-color: #3c6382;
+        opacity: 0.7;
+        padding: 2%;
+        background-color: #3c6382;
     }
 
 
@@ -210,7 +284,7 @@
         margin: 3% auto;
         background-color: rgba(255, 255, 255, 0.7);
         padding: 2%;
-       border-radius: 5%;
+        border-radius: 5%;
     }
     .section-team__name{
         display: flex;
