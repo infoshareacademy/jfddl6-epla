@@ -242,31 +242,6 @@
         transform: scale(1.2);
     }
 
-    .thank-you-flex-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5%;
-    }
-
-    .thank-you-image{
-        width: auto;
-        height: 70vh;
-    }
-
-    @media only screen and (min-width:576px) {
-
-        .section-learn-more__flex-container-headline{
-            font-size: 6vw;
-        }
-
-        .section-learn-more__flex-container-content{
-            font-size: 4.5vw;
-            line-height: 140%;
-            text-align: justify;
-        }
-    }
-
     .section-sign-up{
         margin: 0 auto;
         background-color: #0a3d62;
@@ -331,6 +306,30 @@
         margin-bottom: 8px;
     }
 
+    .thank-you-flex-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .thank-you-image{
+        width: auto;
+        height: 70vh;
+    }
+
+@media only screen and (min-width:576px) {
+
+    .section-learn-more__flex-container-headline{
+        font-size: 6vw;
+    }
+
+    .section-learn-more__flex-container-content{
+        font-size: 4.5vw;
+        line-height: 140%;
+        text-align: justify;
+    }
+
     .cookies {
         font-family: Capriola, sans-serif;
         position: fixed;
@@ -385,6 +384,7 @@
     .cookies--hidden {
         display: none;
     }
+}
 
 @media only screen and (max-width: 767px) {
     .main-nav {
@@ -483,6 +483,11 @@
     .newsletter-form__input-submit{
         margin-top: 3%;
         max-width: 250px;
+    }
+
+    .thank-you-image{
+        width: 80%;
+        height: auto;
     }
 }
 
