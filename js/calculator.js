@@ -4,6 +4,7 @@ const result = document.querySelector('.calculator__result')
 const free = document.querySelector('.account-type-regular');
 const business = document.querySelector('.account-type-business')
 output.innerText = slider.value
+result.innerText = 0 + '$'
 
 const calculatePrice = () => result.innerText = ((parseInt(output.innerText, 10) * 5) + '$')
 
