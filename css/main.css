@@ -185,10 +185,11 @@
         line-height: 150%;
         text-align: justify;
     }
+    
 
     .calculator-wrapper {
         width: 70%;
-        margin: 50px auto 0;
+        margin: 50px auto 50px;
         padding: 40px 30px;
         border: 1px solid #000;
     }
@@ -239,7 +240,7 @@
         border-radius: 50%;
         width: 25px;
         height: 25px;
-        background: #4CAF50;
+        background: #fa983a;
         cursor: pointer;
     }
 
@@ -247,8 +248,13 @@
         width: 25px;
         height: 25px;
         border-radius: 50%;
-        background: #4CAF50;
+        background: #fa983a;
         cursor: pointer;
+    }
+
+    .output {
+        font-weight: bold;
+        margin-left: 10px;
     }
 
     .account-type{
@@ -258,6 +264,10 @@
     .calculator__info {
         text-transform: capitalize;
         margin: 0;
+    }
+
+    .calculator__result {
+        color: #4a69bd;
     }
 
     .section-team-header{
