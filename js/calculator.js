@@ -1,36 +1,23 @@
 var slider = document.querySelector(".calculator__number");
 var output = document.querySelector(".output")
-output.innerHTML = slider.value
-
-slider.oninput = function() {
-    output.innerHTML = this.value
-}
-
 const result = document.querySelector('.calculator__result')
-const persons = document.querySelector('.section-price__value');
-const range = document.querySelector('.section-price__range')
-const free = document.querySelector('.regular-user');
-const business = document.querySelector('.business-user')
+const free = document.querySelector('.account-type-regular');
+const business = document.querySelector('.account-type-business')
+output.innerText = slider.value
 
-const calculatePrice = () => {
-    result.textContent = ((parseInt(persons.textContent, 10) * 5) + '$')
-}
+const calculatePrice = () => result.innerText = ((parseInt(output.innerText, 10) * 5) + '$')
 
-
-range.addEventListener('change', () => {
-    persons.textContent = range.value;
+slider.addEventListener('input', () => {
+    output.innerText = slider.value
     if (business.checked) {
-        calculatePrice();
+        calculatePrice()
     }
-});
-
-business.addEventListener('change', () => {
-    calculatePrice();
 })
 
+business.addEventListener('change', () => calculatePrice() )
 
 free.addEventListener('change', () => {
     if (free.checked) {
-        result.textContent = range.value * 0 + '$';
+        result.innerText = 0 + '$';
     }
 })
