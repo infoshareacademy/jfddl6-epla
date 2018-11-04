@@ -255,6 +255,7 @@
     .calculator__slider-output {
         font-weight: bold;
         margin-left: 10px;
+        width: 5%;
     }
 
     .calculator__account-type{
@@ -281,7 +282,6 @@
         padding: 2%;
         background-color: #3c6382;
     }
-
 
     .section-team__container{
         display: flex;
@@ -552,6 +552,11 @@
 
     .calculator__slider {
         flex-direction: column;
+    }
+
+    .calculator__slider-number{
+        width: 100%;
+        margin: 10px 0;
     }
 
     .section-team__container{
