@@ -254,7 +254,7 @@
 
     .calculator__slider-output {
         font-weight: bold;
-        margin-left: 10px;
+        padding: 0 10px;
         width: 5%;
     }
 
@@ -557,6 +557,10 @@
     .calculator__slider-number{
         width: 100%;
         margin: 10px 0;
+    }
+
+    .calculator__slider-output {
+        width: auto;
     }
 
     .section-team__container{
