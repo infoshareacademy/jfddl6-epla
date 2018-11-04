@@ -197,6 +197,7 @@
     .calculator-wrapper__title {
         text-transform: capitalize;
         margin: 0 0 40px;
+        overflow: hidden;
     }
 
     .calculator__row {
@@ -260,6 +261,14 @@
 
     .calculator__account-type{
         display: block;
+    }
+
+    .account-type-regular{
+        margin: 10px 0 5px 5px;
+    }
+
+    .account-type-business{
+        margin: 5px 0 0 5px;
     }
 
     .calculator__result-info {
