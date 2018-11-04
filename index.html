@@ -152,19 +152,19 @@
         <div class="calculator-wrapper">
             <h1 class="calculator-wrapper__title">Account price calculator</h1>
             <form class="calculator">
-                <div class="calculator__row number-of-accounts">
+                <div class="calculator__row calculator__slider">
                     <label for="number-of-accounts" >Number of accounts: </label>
-                    <input type="range" min="1" max="40" value="0" step="1" class="calculator__number" required />
-                    <span class="output"></span>
+                    <input type="range" min="1" max="40" value="0" step="1" class="calculator__slider-number" required />
+                    <span class="calculator__slider-output"></span>
                 </div>
-                <div class="calculator__row account-type">
+                <div class="calculator__row calculator__account-type">
                     <label for="account-type">Type of account:</label> <br />
-                    <input type="radio" class="account-type-regular" name="type" value="regular-user" checked/> Regular user
+                    <input type="radio" class="account-type-regular" name="type" value="regular-user" checked/> <span>Regular user</span>
                     <br>
-                    <input type="radio" class="account-type-business" name="type" value="business-user" />Business user
+                    <input type="radio" class="account-type-business" name="type" value="business-user" /> <span>Business user</span>
                 </div>
-                <div class="calculator__row result">
-                    <h2 class="calculator__info">Final price: <span class="calculator__result"></span></h2>
+                <div class="calculator__row calculator__result">
+                    <h2 class="calculator__result-info">Final price: <span class="calculator__result-number"></span></h2>
                 </div>
             </form>
         </div>
