@@ -1,7 +1,7 @@
-var slider = document.querySelector(".calculator__slider-number");
+var slider = document.querySelector(".calculator__slider-number")
 var output = document.querySelector(".calculator__slider-output")
 const result = document.querySelector('.calculator__result-number')
-const free = document.querySelector('.account-type-regular');
+const free = document.querySelector('.account-type-regular')
 const business = document.querySelector('.account-type-business')
 output.innerText = slider.value
 result.innerText = 0 + '$'
