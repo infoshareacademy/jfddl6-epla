@@ -48,6 +48,7 @@ class Game {
             })
             document.body.appendChild(rowDiv)
         })
+        this.countScore()
     }
 
     renderSingleCell(cell, rowDiv) {
@@ -77,13 +78,13 @@ class Game {
             event => {
                 switch (event.key) {
                     case 'ArrowRight':
-                    event.preventDefault
-                    this.checkIfMoveIsAvailable(1, 0)
-                    break
-                case 'ArrowLeft':
-                    event.preventDefault
-                    this.checkIfMoveIsAvailable(-1, 0)
-                    break
+                        event.preventDefault
+                        this.checkIfMoveIsAvailable(1, 0)
+                        break
+                    case 'ArrowLeft':
+                        event.preventDefault
+                        this.checkIfMoveIsAvailable(-1, 0)
+                        break
                 }
             }
         )
@@ -107,33 +108,48 @@ class Game {
         this.playerPosition = newPlayerPosition
         this.render()
     }
+
+    countScore() {
+        const score = document.createElement('span')
+        let scoreNumber = 0
+
+        function timer() {
+            setInterval(() => {
+                scoreNumber++
+                score.innerText = scoreNumber
+            }, 100)
+        }
+
+        document.body.appendChild(score)
+        timer()
+    }
 }
 
-    // FUNCTIONS
+// FUNCTIONS
 
 
 
-    // here you can put some functions taht renders only parts of the game 
-    // and will be used in render function
+// here you can put some functions taht renders only parts of the game
+// and will be used in render function
 
-    // here you will attach all events listeners like oncliks or keydowns
-    function attachEventListeners() { }
+// here you will attach all events listeners like oncliks or keydowns
+function attachEventListeners() { }
 
-    // move should be another function called eg. when event is fired
-    // it is quite obvious that move bakwards is a move fovard with minus sign ;)
+// move should be another function called eg. when event is fired
+// it is quite obvious that move bakwards is a move fovard with minus sign ;)
 
 
-    // in this fucntion you can do all stuff that needs to be repeated
-    // you can invoke this function in an interval
-    // you can set that interval in init function
-    function gameTick() { }
+// in this fucntion you can do all stuff that needs to be repeated
+// you can invoke this function in an interval
+// you can set that interval in init function
+function gameTick() { }
 
-    // below functions are self-describing ;)
-    function incScore() { }
-    function displayScore() { }
+// below functions are self-describing ;)
+function incScore() { }
+function displayScore() { }
 
-    // invoked when game ends (you can check if time elepsed eg. in gameTick function)
-    function endGame() { }
+// invoked when game ends (you can check if time elepsed eg. in gameTick function)
+function endGame() { }
 
     // HELPERS
 
