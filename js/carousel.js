@@ -1,5 +1,6 @@
 
-let index = 1;
+document.querySelector('.carousel__item-slide1').classList.add('active')
+let index = 2;
 
 setInterval(() => {
     if (index >= 2) {
@@ -12,7 +13,7 @@ setInterval(() => {
     index++;
     // document.querySelector('.carousel__item-slide'+index-1).classList.add('active')
     
-}, 1000)
+}, 5000)
 
 
 
