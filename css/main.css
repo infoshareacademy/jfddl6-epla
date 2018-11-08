@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.active{
+    background-color: white;
+}
+
 .main-nav{
     width: 100%;
     display: flex;
