@@ -12,9 +12,9 @@ window.addEventListener(
                 const menuEl = document.querySelector('a[href="#' + id + '"]')
 
                 document.querySelectorAll('.main-menu__link')
-                    .forEach(menuEl => menuEl.classList.remove('active'))
+                    .forEach(menuEl => menuEl.classList.remove('nav-active'))
 
-                menuEl.classList.add('active')
+                menuEl.classList.add('nav-active')
                 return
             }
         })
