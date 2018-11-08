@@ -1,117 +1,111 @@
- class Game {
-        constructor() {
-            this.boardXLength = 7
-            this.boardYLength = 10
+class Game {
+    constructor() {
+        this.boardXLength = 9
+        this.boardYLength = 10
 
-            this.gameContainer = null
-            this.scoreContainer = null
+        this.initialBoardContainer = (
+            Array(this.boardYLength)
+                .fill(1)
+                .map(el => (
+                    Array(this.boardXLength)
+                        .fill(1)
+                ))
+        )
 
-            this.initialBoardArr = (
-                Array(this.boardYLength)
-                    .fill(1)
-                    .map(el => (
-                        Array(this.boardXLength)
-                            .fill(1)
-                    ))
-            )
+        this.boardContainer = null
 
-            this.boardArr = null
-
-            this.initialPlayerPosition = {
-                x: 4,
-                y: 10
-            }
-            this.playerPosition = this.initialPlayerPosition
-
-            this.score = 0
-
-            this.gameInterval = null
-
-            this.init()
+        this.initialPlayerPosition = {
+            x: 4,
+            y: 9
         }
+        this.playerPosition = this.initialPlayerPosition
 
-        init() {
+        this.scoreContainer = null
+        this.score = 0
 
-            this.startListeningToArrows()
-            this.render()
+        this.gameInterval = null
 
-            alert('Press "ok" to start!')
-            this.gameInterval = setInterval(gameTick, 1000)
-            // this function should be called when we want to init game
-            // it accepts 1 argument - dom node of the container
-            // where game should be rendered, eg it can be body of document
-
-            // this function should render first frame of game and set all
-            // of the variables like time to game end that werent predefinied
-        }
-
-        render() {
-            document.body.innerHTML = ''
-
-            this.composeBoard()
-            this.boardArr.forEach((row, i) => {
-                const rowDiv = document.createElement('div')
-                rowDiv.style.height = '50px'
-
-                row.forEach((cell, j) => {
-                    this.renderSingleCell(cell, rowDiv)
-                })
-                document.body.appendChild(rowDiv)
-            })
-        }
-
-        renderSingleCell(cell, rowDiv) {
-            const cellDiv = document.createElement('div')
-
-            cellDiv.style.display = "inline-block"
-            cellDiv.style.width = '50px'
-            cellDiv.style.height = '50px'
-
-            if (cell === 0) cellDiv.style.backgroundColor = 'green'
-            if (cell === 1) cellDiv.style.backgroundColor = 'gray'
-            if (cell === 'P') cellDiv.style.backgroundColor = 'red'
-
-            rowDiv.appendChild(cellDiv)
-        }
-
-        composeBoard() {
-            this.boardArr = JSON.parse(JSON.stringify(this.initialBoardArr))
-            this.boardArr[this.playerPosition.x] = 'P'
-        }
-
-        startListeningToArrows() {
-            window.addEventListener(
-                'keydown',
-                event => {
-                    switch (event.key) {
-                        case 'ArrowRight':
-                        event.preventDefault
-                        this.checkIfMoveIsAvailable(1)
-                        break
-                    case 'ArrowLeft':
-                        event.preventDefault
-                        this.checkIfMoveIsAvailable(-1)
-                        break
-                    }
-                }
-            )
-        }
-        checkIfMoveIsAvailable(deltaX) {
-            const newPlayerPosition = {
-                x: this.playerPosition.x + deltaX
-            }
-            if (this.boardArr[newPlayerPosition.x])
-            {
-                this.move(newPlayerPosition)
-            }
-        }
-        move(newPlayerPosition) {
-            this.playerPosition = newPlayerPosition
-
-            this.render()
-        }
-
+        this.init()
     }
+
+    init() {
+        this.startListeningToArrows()
+        this.render()
+
+        //alert('enter your email to play!')
+    }
+
+    render() {
+        document.body.innerHTML = ''
+
+        this.composeBoard()
+        this.boardContainer.forEach((row, i) => {
+            const rowDiv = document.createElement('div')
+            rowDiv.style.height = '90px'
+
+            row.forEach((cell, j) => {
+                this.renderSingleCell(cell, rowDiv)
+            })
+            document.body.appendChild(rowDiv)
+        })
+    }
+
+    renderSingleCell(cell, rowDiv) {
+        const cellDiv = document.createElement('div')
+
+        cellDiv.style.display = "inline-block"
+        cellDiv.style.width = '90px'
+        cellDiv.style.height = '90px'
+
+        if (cell === 0) cellDiv.style.backgroundColor = 'green'
+        if (cell === 1) cellDiv.style.backgroundColor = 'rgb(242, 242, 242)'
+        if (cell === 'P') cellDiv.style.backgroundColor = 'red'
+
+        rowDiv.appendChild(cellDiv)
+    }
+
+    composeBoard() {
+        this.boardContainer = JSON.parse(JSON.stringify(this.initialBoardContainer))
+        this.boardContainer[this.playerPosition.y][this.playerPosition.x] = 'P'
+    }
+
+    startListeningToArrows() {
+        window.addEventListener(
+            'keydown',
+            event => {
+                switch (event.key) {
+                    case 'ArrowRight':
+                    event.preventDefault
+                    this.checkIfMoveIsAvailable(1, 0)
+                    break
+                case 'ArrowLeft':
+                    event.preventDefault
+                    this.checkIfMoveIsAvailable(-1, 0)
+                    break
+                }
+            }
+        )
+    }
+
+    checkIfMoveIsAvailable(deltaX, deltaY) {
+        const newPlayerPosition = {
+            x: this.playerPosition.x + deltaX,
+            y: this.playerPosition.y + deltaY
+        }
+
+        if (
+            this.boardContainer[newPlayerPosition.y] &&
+            this.boardContainer[newPlayerPosition.y][newPlayerPosition.x]
+        ) {
+            this.move(newPlayerPosition)
+        }
+    }
+
+    move(newPlayerPosition) {
+        this.playerPosition = newPlayerPosition
+        this.render()
+    }
+}
 
     // FUNCTIONS
 
