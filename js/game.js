@@ -59,7 +59,9 @@ class Game {
 
         if (cell === 0) cellDiv.style.backgroundColor = 'green'
         if (cell === 1) cellDiv.style.backgroundColor = 'rgb(242, 242, 242)'
-        if (cell === 'P') cellDiv.style.backgroundColor = 'red'
+        if (cell === 'P') cellDiv.style.backgroundColor = 'rgb(242, 242, 242)'
+        if (cell === 'P') cellDiv.style.backgroundImage = "url('./img/car.png')"
+        if (cell === 'P') cellDiv.style.backgroundSize = "contain"
 
         rowDiv.appendChild(cellDiv)
     }
