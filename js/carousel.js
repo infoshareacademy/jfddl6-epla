@@ -2,7 +2,7 @@
 document.querySelector('.carousel__item-slide1').classList.add('active')
 let index = 2;
 
-setInterval(() => {
+let fading = setInterval(function timeStart(){
     if (index >= 2) {
         document.querySelector('.carousel__item-slide' + (index - 1)).classList.remove('active')
     }
@@ -11,10 +11,25 @@ setInterval(() => {
     }
     document.querySelector('.carousel__item-slide' + index).classList.add('active')
     index++;
-    // document.querySelector('.carousel__item-slide'+index-1).classList.add('active')
-    
-}, 5000)
 
+
+    document.querySelector('.carousel').addEventListener('mouseover', function () {
+        clearInterval(fading)
+    })
+    
+    })
+    document.querySelector('.carousel').addEventListener('mouseout', function () {
+        fading = setInterval(timeStart(), 2000)
+    })
+    })
+
+
+
+
+
+
+
+}, 5000)
 
 
 
