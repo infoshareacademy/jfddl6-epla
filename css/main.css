@@ -79,6 +79,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center bottom;
+        transition: .5s;
       }
 
       .carousel__item.active {
