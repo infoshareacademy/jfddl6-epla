@@ -31,12 +31,14 @@ class Game {
     init() {
         this.startListeningToArrows()
         this.render()
+        this.countScore()
 
-        //alert('enter your email to play!')
+        //alert('Press ok to play!')
     }
 
     render() {
-        document.body.innerHTML = ''
+        const gameBoardContainer = document.querySelector('.game-board-container')
+        gameBoardContainer.innerHTML = ''
 
         this.composeBoard()
         this.boardContainer.forEach((row, i) => {
@@ -46,9 +48,8 @@ class Game {
             row.forEach((cell, j) => {
                 this.renderSingleCell(cell, rowDiv)
             })
-            document.body.appendChild(rowDiv)
+            gameBoardContainer.appendChild(rowDiv)
         })
-        this.countScore()
     }
 
     renderSingleCell(cell, rowDiv) {
@@ -69,6 +70,12 @@ class Game {
 
     composeBoard() {
         this.boardContainer = JSON.parse(JSON.stringify(this.initialBoardContainer))
+        console.log(this.boardContainer)
+        //this.boardContainer[0].forEach(element => element = Math.round(Math.random()))
+        for (let i = 0; i < 9; i++) {
+            this.boardContainer[0][i] = Math.round(Math.random());
+        }
+        console.log(this.boardContainer[0])
         this.boardContainer[this.playerPosition.y][this.playerPosition.x] = 'P'
     }
 
@@ -83,8 +90,8 @@ class Game {
                         break
                     case 'ArrowLeft':
                         event.preventDefault
-                        this.checkIfMoveIsAvailable(-1, 0)
-                        break
+                        this.checkIfMoveIsAvMath(-1, 0)
+                        break;
                 }
             }
         )
@@ -110,18 +117,17 @@ class Game {
     }
 
     countScore() {
-        const score = document.createElement('span')
-        let scoreNumber = 0
+        this.score = document.querySelector('.score')
+        this.scoreNumber = 0
 
-        function timer() {
-            setInterval(() => {
-                scoreNumber++
-                score.innerText = scoreNumber
-            }, 100)
-        }
+        this.timer()
+    }
 
-        document.body.appendChild(score)
-        timer()
+    timer() {
+        setInterval(() => {
+            this.scoreNumber++
+            this.score.innerText = `Score: ${this.scoreNumber}`
+        }, 100)
     }
 }
 
