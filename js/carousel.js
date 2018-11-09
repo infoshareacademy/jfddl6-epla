@@ -2,7 +2,8 @@
 document.querySelector('.carousel__item-slide1').classList.add('active')
 let index = 2;
 
-let fading = setInterval(function timeStart(){
+
+let fading = function timeStart() {
     if (index >= 2) {
         document.querySelector('.carousel__item-slide' + (index - 1)).classList.remove('active')
     }
@@ -12,24 +13,41 @@ let fading = setInterval(function timeStart(){
     document.querySelector('.carousel__item-slide' + index).classList.add('active')
     index++;
 
+}
+let stopIv = setInterval(fading, 2000);
 
-    document.querySelector('.carousel').addEventListener('mouseover', function () {
-        clearInterval(fading)
+
+document.querySelector('.carousel').addEventListener("mouseover", function () {
+    clearInterval(stopIv)
+}
+);
+
+document.querySelector('.carousel').addEventListener("mouseout", function () {
+    stopIv = setInterval(fading, 2000);
+}
+);
+
+// let stopIv = setInterval(fading, 1000)
+
+// stopIv();
+
+/*
+
+
+    let stopIv = setInterval(fadingOut, 2000)
+    document.querySelector('.pause_slider_left').addEventListener('mouseover', function () {
+        clearInterval(stopIv)
     })
-    
+    document.querySelector('.pause_slider_right').addEventListener('mouseover', function () {
+        clearInterval(stopIv)
     })
-    document.querySelector('.carousel').addEventListener('mouseout', function () {
-        fading = setInterval(timeStart(), 2000)
+    document.querySelector('.pause_slider_left').addEventListener('mouseout', function () {
+        stopIv = setInterval(fadingOut, 2000)
     })
-    })
+*/
 
 
 
-
-
-
-
-}, 5000)
 
 
 
