@@ -122,11 +122,23 @@ class Game {
         })
     }
 
-    checkIfObstacleMoveIsAvailable(predictedObstaclePosition){
-        if (predictedObstaclePosition.y > this.boardYLength - 1){
+    checkIfObstacleMoveIsAvailable(predictedObstaclePosition) {
+        if (predictedObstaclePosition.y > this.boardYLength - 1) {
+            return false
+        }
+        if (
+            predictedObstaclePosition.x === this.playerPosition.x &&
+            predictedObstaclePosition.y === this.playerPosition.y
+        ) {
+            this.gameEnd()
             return false
         }
         return true
+    }
+
+    gameEnd() {
+        alert('you loser. You lost')
+        window.location = ''
     }
 
     moveObstaclesDown() {
