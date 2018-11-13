@@ -14,7 +14,7 @@ let fading = function timeStart() {
     index++;
 
 }
-let stopIv = setInterval(fading, 2000);
+let stopIv = setInterval(fading, 5000);
 
 
 document.querySelector('.carousel').addEventListener("mouseover", function () {
@@ -23,7 +23,7 @@ document.querySelector('.carousel').addEventListener("mouseover", function () {
 );
 
 document.querySelector('.carousel').addEventListener("mouseout", function () {
-    stopIv = setInterval(fading, 2000);
+    stopIv = setInterval(fading, 5000);
 }
 );
 
