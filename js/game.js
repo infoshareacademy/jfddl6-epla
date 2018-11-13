@@ -24,7 +24,7 @@ class Game {
             x: 2,
             y: 0
         }]
-        this.scoreBoard = []
+        this.scoreBoard = JSON.parse(localStorage.getItem('ePla-game')) || []
         this.scoreContainer = document.querySelector('.score')
         this.score = 0
 
@@ -46,7 +46,6 @@ class Game {
         this.startListeningToArrows()
         this.render()
         this.startGameInterval()
-        localStorage.getItem()
 
         //alert('Press ok to play!')
     }
