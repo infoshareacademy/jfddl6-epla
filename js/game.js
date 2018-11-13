@@ -24,7 +24,7 @@ class Game {
             x: 2,
             y: 0
         }]
-
+        this.scoreBoard = []
         this.scoreContainer = document.querySelector('.score')
         this.score = 0
 
@@ -46,6 +46,7 @@ class Game {
         this.startListeningToArrows()
         this.render()
         this.startGameInterval()
+        localStorage.getItem()
 
         //alert('Press ok to play!')
     }
@@ -151,8 +152,13 @@ class Game {
 
     gameEnd() {
         alert('you loser. You lost')
-
+        this.displayScoreboard()
         window.location = ''
+    }
+
+    displayScoreboard() {
+        this.scoreBoard = this.scoreBoard.concat(this.score)
+        this.scoreBoard.sort((a, b) => b - a)
     }
 
     moveObstaclesDown() {
