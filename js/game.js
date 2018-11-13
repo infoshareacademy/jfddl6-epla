@@ -89,11 +89,11 @@ class Game {
         this.boardContainer[this.playerPosition.y][this.playerPosition.x] = 'P'
     }
 
-    getRandomInt(min, max){
-       return Math.floor(Math.random() * (max - min + 1)) + min
+    getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min
     }
 
-    startGameInterval(){
+    startGameInterval() {
         return setInterval(
             () => {
                 this.gameTick()
@@ -102,7 +102,7 @@ class Game {
         )
     }
 
-    gameTick(){
+    gameTick() {
         this.timeElapsed = this.timeElapsed + this.tickSpeed
 
         this.scoreUp()
@@ -114,7 +114,7 @@ class Game {
         this.render()
     }
 
-    generateObstacle(){
+    generateObstacle() {
         const obstacleXPosition = this.getRandomInt(0, this.boardXLength - 1)
         this.obstacles = this.obstacles.concat({
             x: obstacleXPosition,
@@ -122,11 +122,25 @@ class Game {
         })
     }
 
-    moveObstaclesDown(){
-        this.obstacles = this.obstacles.map(obstacle => ({
-            x: obstacle.x,
-            y: obstacle.y + 1
+    checkIfObstacleMoveIsAvailable(predictedObstaclePosition){
+        if (predictedObstaclePosition.y > this.boardYLength - 1){
+            return false
+        }
+        return true
+    }
+
+    moveObstaclesDown() {
+        this.obstacles = this.obstacles.filter((obstacle => {
+            const predictedObstaclePosition = {
+                x: obstacle.x,
+                y: obstacle.y + 1
+            }
+            return this.checkIfObstacleMoveIsAvailable(predictedObstaclePosition)
         }))
+            .map(obstacle => ({
+                x: obstacle.x,
+                y: obstacle.y + 1
+            }))
     }
 
     startListeningToArrows() {
@@ -166,11 +180,11 @@ class Game {
         this.render()
     }
 
-    scoreUp(){
+    scoreUp() {
         this.score++
     }
 
-    renderScore(){
+    renderScore() {
         this.scoreContainer.innerText = `Score: ${this.score}`
     }
 }
