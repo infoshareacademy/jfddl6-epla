@@ -108,6 +108,7 @@ class Game {
         this.scoreUp()
         this.renderScore()
 
+        if (this.timeElapsed % this.timeToGenerateObstacle === 0) this.moveObstaclesDown()
         if (this.timeElapsed % this.timeToGenerateObstacle === 0) this.generateObstacle()
 
         this.render()
@@ -119,6 +120,13 @@ class Game {
             x: obstacleXPosition,
             y: 0
         })
+    }
+
+    moveObstaclesDown(){
+        this.obstacles = this.obstacles.map(obstacle => ({
+            x: obstacle.x,
+            y: obstacle.y + 1
+        }))
     }
 
     startListeningToArrows() {
