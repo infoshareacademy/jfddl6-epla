@@ -20,10 +20,21 @@ class Game {
         }
         this.playerPosition = this.initialPlayerPosition
 
-        this.scoreContainer = null
+        this.obstacles = [{
+            x: 2,
+            y: 0
+        }]
+
+        this.scoreContainer = document.querySelector('.score')
         this.score = 0
 
         this.gameInterval = null
+
+        this.timeElapsed = 0
+
+        // must be multiply of 10
+        this.tickSpeed = 100
+        this.timeToGenerateObstacle = 1000
 
         this.init()
     }
@@ -31,7 +42,7 @@ class Game {
     init() {
         this.startListeningToArrows()
         this.render()
-        this.countScore()
+        this.startGameInterval()
 
         //alert('Press ok to play!')
     }
@@ -70,13 +81,44 @@ class Game {
 
     composeBoard() {
         this.boardContainer = JSON.parse(JSON.stringify(this.initialBoardContainer))
-        console.log(this.boardContainer)
-        //this.boardContainer[0].forEach(element => element = Math.round(Math.random()))
-        for (let i = 0; i < 9; i++) {
-            this.boardContainer[0][i] = Math.round(Math.random());
-        }
-        console.log(this.boardContainer[0])
+
+        this.obstacles.forEach(obstacle => {
+            this.boardContainer[obstacle.y][obstacle.x] = 0
+        })
+
         this.boardContainer[this.playerPosition.y][this.playerPosition.x] = 'P'
+    }
+
+    getRandomInt(min, max){
+       return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+
+    startGameInterval(){
+        return setInterval(
+            () => {
+                this.gameTick()
+            },
+            this.tickSpeed
+        )
+    }
+
+    gameTick(){
+        this.timeElapsed = this.timeElapsed + this.tickSpeed
+
+        this.scoreUp()
+        this.renderScore()
+
+        if (this.timeElapsed % this.timeToGenerateObstacle === 0) this.generateObstacle()
+
+        this.render()
+    }
+
+    generateObstacle(){
+        const obstacleXPosition = this.getRandomInt(0, this.boardXLength - 1)
+        this.obstacles = this.obstacles.concat({
+            x: obstacleXPosition,
+            y: 0
+        })
     }
 
     startListeningToArrows() {
@@ -90,7 +132,7 @@ class Game {
                         break
                     case 'ArrowLeft':
                         event.preventDefault
-                        this.checkIfMoveIsAvMath(-1, 0)
+                        this.checkIfMoveIsAvailable(-1, 0)
                         break;
                 }
             }
@@ -116,18 +158,12 @@ class Game {
         this.render()
     }
 
-    countScore() {
-        this.score = document.querySelector('.score')
-        this.scoreNumber = 0
-
-        this.timer()
+    scoreUp(){
+        this.score++
     }
 
-    timer() {
-        setInterval(() => {
-            this.scoreNumber++
-            this.score.innerText = `Score: ${this.scoreNumber}`
-        }, 100)
+    renderScore(){
+        this.scoreContainer.innerText = `Score: ${this.score}`
     }
 }
 
