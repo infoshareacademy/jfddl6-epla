@@ -33,8 +33,11 @@ class Game {
         this.timeElapsed = 0
 
         // must be multiply of 10
-        this.tickSpeed = 100
+        this.tickSpeed = 10
         this.timeToGenerateObstacle = 1000
+        this.timeToMoveObstacle = 600
+        this.timeToSpeedUp = 5000
+        this.level = 0
 
         this.init()
     }
@@ -108,10 +111,20 @@ class Game {
         this.scoreUp()
         this.renderScore()
 
-        if (this.timeElapsed % this.timeToGenerateObstacle === 0) this.moveObstaclesDown()
+        if (this.timeElapsed % this.timeToMoveObstacle === 0) this.moveObstaclesDown()
         if (this.timeElapsed % this.timeToGenerateObstacle === 0) this.generateObstacle()
+        if (
+            this.timeElapsed % this.timeToSpeedUp === 0 &&
+            this.level < 3
+        ) this.speedUp()
 
         this.render()
+    }
+
+    speedUp() {
+        this.level++
+        this.timeToGenerateObstacle = this.timeToGenerateObstacle / 2
+        this.timeToMoveObstacle = this.timeToMoveObstacle / 2
     }
 
     generateObstacle() {
@@ -138,6 +151,7 @@ class Game {
 
     gameEnd() {
         alert('you loser. You lost')
+
         window.location = ''
     }
 
