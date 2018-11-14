@@ -129,6 +129,11 @@
     text-shadow: 0 0 30px #000, 0 0 30px #000, 0 0 30px #000, 0 0 30px #000, -1px 0 #82ccdd, 0 1px #82ccdd, 1px 0 #82ccdd, 0 -1px #82ccdd;
 }
 
+.carousel__nav{
+    position: relative;
+    min-height: 100vh;
+}
+
 .carousel__slider-button-prev, .carousel__slider-button-next {
     cursor: pointer;
     z-index: 2;
@@ -141,6 +146,11 @@
     border: 0;
     text-indent: -999px;
     overflow: hidden;
+    transition: .5s;
+}
+
+.carousel__slider-button-prev:hover, .carousel__slider-button-next:hover{
+background: rgba(0, 0, 0, 0.6);
 }
 
 .carousel__slider-button-next {
@@ -221,6 +231,10 @@
 .slider-dots-button:focus {
     outline: none;
 }
+
+
+
+
 
 .section-features__header {
     display: flex;
