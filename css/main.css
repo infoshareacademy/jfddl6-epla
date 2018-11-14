@@ -564,11 +564,14 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .carousel__item {
+        height: 100vh;
+    }
     .carousel__item-header {
-        font-size: 6vw;
+        font-size: 7vw;
     }
     .carousel__item-text {
-        margin: 30vh auto 15vh auto;
+        margin: 30vh auto 10vh auto;
         font-size: 5vw;
     }
     .section-learn-more__flex-container {
@@ -633,20 +636,13 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    .carousel__item-header {}
-    .carousel__item-text {}
-    .main-nav__logo {
-        max-height: 6vw;
+    .carousel__item-header {
+        font-size: 5vw;
     }
-    /* .carousel__item-header {
-        font-size: 500%;
-        letter-spacing: 30px;
-        }
-
     .carousel__item-text {
-        font-size: 400%;
-        letter-spacing: 10px;
-    } */
+        margin: 30vh auto 10vh auto;
+        font-size: 3vw;
+    }
     .section-learn-more__flex-container-headline {
         font-size: 2vw;
     }
