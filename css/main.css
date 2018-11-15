@@ -500,6 +500,13 @@
     height: 70vh;
 }
 
+.game-information-container {
+    font-family: Capriola, sans-serif;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
 .cookies {
     font-family: 'Capriola', sans-serif;
     position: fixed;
