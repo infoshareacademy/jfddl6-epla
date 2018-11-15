@@ -2,7 +2,7 @@
 document.querySelector('.carousel__item-slide1').classList.add('active')
 let index = 2;
 
-let fading = function timeStart() {
+const fading = function timeStart() {
     if (index >= 2) {
         document.querySelector('.carousel__item-slide' + (index - 1)).classList.remove('active')
     }
@@ -13,7 +13,7 @@ let fading = function timeStart() {
     index++
 }
 
-let stopIv = setInterval(fading, 5000);
+const stopIv = setInterval(fading, 5000);
 document.querySelector('.carousel').addEventListener("mouseover", function () {
     clearInterval(stopIv)
 })
