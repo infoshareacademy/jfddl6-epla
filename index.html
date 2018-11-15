@@ -16,6 +16,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animate.css">
 </head>
 
 <body class='body'>
@@ -34,13 +35,39 @@
         </ul>
     </nav>
 
+
+
+
     <section id="hero" class="sections section-hero">
-        <div class="section-hero__flex-container">
-            <h1 class="section-hero__flex-container-header">Event planner</h1>
-            <p class="section-hero__flex-container-text">for You <br>to save your time</p>
+        <div class="carousel">
+            <div class="carousel__item carousel__item-slide1">
+                <h1 class="carousel__item-header">Event planner</h1>
+                <p class="carousel__item-text">for You <br>to save your time</p>
+            </div>
+            <div class="carousel__item carousel__item-slide2">
+                <h1 class="carousel__item-header">Find plenty of events </h1>
+                <p class="carousel__item-text">Meet there with your friends</p>
+            </div>
+            <div class="carousel__item carousel__item-slide3">
+                <h1 class="carousel__item-header">Enjoy your free time</h1>
+                <p class="carousel__item-text">in the way <br>you like to</p>
+            </div>
+            <div class="carousel__item carousel__item-slide4">
+                <h1 class="carousel__item-header">Add your own events</h1>
+                <p class="carousel__item-text">And let it spread<br> through local community</p>
+            </div>
+            <div class="carousel__nav">
+                <button type="button" class="carousel__slider-button carousel__slider-button-prev">Poprzedni</button>
+                <button type="button" class="carousel__slider-button carousel__slider-button-next">Następny</button>
+            </div>
         </div>
 
+
+
+
+
     </section>
+
     <div class="section-features__header">
         <h2 class="header__text">Aplication features</h2>
     </div>
@@ -258,7 +285,9 @@
     </section>
     <script src="./js/cookies.js"></script>
     <script src="./js/hamburger.js"></script>
+    <script src="./js/carousel.js"></script>
     <script src="./js/calculator.js"></script>
+    <script src="./js/animated-photos.js"></script>
 </body>
 
 </html>
