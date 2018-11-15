@@ -48,11 +48,11 @@ class Game {
         this.startGameInterval()
 
         alert(`    Event racer!
-    Poruszając się strzałkami w lewo i w prawo unikaj napotykanych 
-    na swojej drodze przeszkód.
-    Zdobywaj punkty wraz z upływem czasu.
-    Osiągaj coraz wyższe poziomy trudności.
-    Pobij własny rekord i dojedź jak najdalej!
+    Press left and right arrows to move and avoid
+    obstacles that appear in your path.
+    Get points with passing time.
+    Reach higher difficulty levels.
+    Beat your own high score and get as far as you can!
 
     Press ok to play!`)
     }
@@ -159,29 +159,6 @@ class Game {
         return true
     }
 
-    gameEnd() {
-        alert('you loser. You lost')
-        this.updateScoreBoard()
-        this.displayScoreboard()
-        window.location = ''
-    }
-
-    updateScoreBoard() {
-        this.scoreBoard = this.scoreBoard.concat(this.score)
-        this.scoreBoard.sort((a, b) => b - a)
-        if (this.scoreBoard.length > 10) {
-            this.scoreBoard.pop()
-        }
-        localStorage.setItem('ePla-game', `${JSON.stringify(this.scoreBoard)}`)
-    }
-
-    displayScoreboard() {
-        alert(`Twoje wyniki:
-        ${this.scoreBoard.map((element, index) => `${index + 1}. ${element}
-        `).join('')
-            }`)
-    }
-
     moveObstaclesDown() {
         this.obstacles = this.obstacles.filter((obstacle => {
             const predictedObstaclePosition = {
@@ -240,36 +217,28 @@ class Game {
     renderScore() {
         this.scoreContainer.innerText = `Score: ${this.score}`
     }
+
+    updateScoreBoard() {
+        this.scoreBoard = this.scoreBoard.concat(this.score)
+        this.scoreBoard.sort((a, b) => b - a)
+        if (this.scoreBoard.length > 10) {
+            this.scoreBoard.pop()
+        }
+        localStorage.setItem('ePla-game', `${JSON.stringify(this.scoreBoard)}`)
+    }
+
+    displayScoreboard() {
+        alert(`YOU LOST!
+
+        Your Scores:
+        ${this.scoreBoard.map((element, index) => `${index + 1}. ${element}
+        `).join('')
+            }`)
+    }
+
+    gameEnd() {
+        this.updateScoreBoard()
+        this.displayScoreboard()
+        window.location = ''
+    }
 }
-
-// FUNCTIONS
-
-
-
-// here you can put some functions taht renders only parts of the game
-// and will be used in render function
-
-// here you will attach all events listeners like oncliks or keydowns
-function attachEventListeners() { }
-
-// move should be another function called eg. when event is fired
-// it is quite obvious that move bakwards is a move fovard with minus sign ;)
-
-
-// in this fucntion you can do all stuff that needs to be repeated
-// you can invoke this function in an interval
-// you can set that interval in init function
-function gameTick() { }
-
-// below functions are self-describing ;)
-function incScore() { }
-function displayScore() { }
-
-// invoked when game ends (you can check if time elepsed eg. in gameTick function)
-function endGame() { }
-
-    // HELPERS
-
-    // here put some functions that are not directly itto the game
-    // but will help to do some general stuff - like make an array of ...
-
