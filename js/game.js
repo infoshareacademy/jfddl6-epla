@@ -34,9 +34,9 @@ class Game {
 
         // must be multiply of 10
         this.tickSpeed = 10
-        this.timeToGenerateObstacle = 1000
-        this.timeToMoveObstacle = 600
-        this.timeToSpeedUp = 5000
+        this.timeToGenerateObstacle = 800
+        this.timeToMoveObstacle = 400
+        this.timeToSpeedUp = 10000
         this.level = 0
 
         this.init()
@@ -47,7 +47,14 @@ class Game {
         this.render()
         this.startGameInterval()
 
-        //alert('Press ok to play!')
+        alert(`    Event racer!
+    Poruszając się strzałkami w lewo i w prawo unikaj napotykanych 
+    na swojej drodze przeszkód.
+    Zdobywaj punkty wraz z upływem czasu.
+    Osiągaj coraz wyższe poziomy trudności.
+    Pobij własny rekord i dojedź jak najdalej!
+
+    Press ok to play!`)
     }
 
     render() {
@@ -57,7 +64,7 @@ class Game {
         this.composeBoard()
         this.boardContainer.forEach((row, i) => {
             const rowDiv = document.createElement('div')
-            rowDiv.style.height = '90px'
+            rowDiv.style.height = '9vh'
 
             row.forEach((cell, j) => {
                 this.renderSingleCell(cell, rowDiv)
@@ -70,8 +77,8 @@ class Game {
         const cellDiv = document.createElement('div')
 
         cellDiv.style.display = "inline-block"
-        cellDiv.style.width = '90px'
-        cellDiv.style.height = '90px'
+        cellDiv.style.width = '9vh'
+        cellDiv.style.height = '9vh'
 
         if (cell === 0) cellDiv.style.backgroundColor = 'green'
         if (cell === 1) cellDiv.style.backgroundColor = 'rgb(242, 242, 242)'
@@ -112,7 +119,10 @@ class Game {
         this.renderScore()
 
         if (this.timeElapsed % this.timeToMoveObstacle === 0) this.moveObstaclesDown()
-        if (this.timeElapsed % this.timeToGenerateObstacle === 0) this.generateObstacle()
+        if (this.timeElapsed % this.timeToGenerateObstacle === 0) {
+            this.generateObstacle()
+            this.generateObstacle()
+        }
         if (
             this.timeElapsed % this.timeToSpeedUp === 0 &&
             this.level < 3
@@ -151,13 +161,25 @@ class Game {
 
     gameEnd() {
         alert('you loser. You lost')
+        this.updateScoreBoard()
         this.displayScoreboard()
         window.location = ''
     }
 
-    displayScoreboard() {
+    updateScoreBoard() {
         this.scoreBoard = this.scoreBoard.concat(this.score)
         this.scoreBoard.sort((a, b) => b - a)
+        if (this.scoreBoard.length > 10) {
+            this.scoreBoard.pop()
+        }
+        localStorage.setItem('ePla-game', `${JSON.stringify(this.scoreBoard)}`)
+    }
+
+    displayScoreboard() {
+        alert(`Twoje wyniki:
+        ${this.scoreBoard.map((element, index) => `${index + 1}. ${element}
+        `).join('')
+            }`)
     }
 
     moveObstaclesDown() {
