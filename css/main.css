@@ -415,6 +415,13 @@
         height: 70vh;
     }
 
+    .gameInformation {
+        font-family: Capriola, sans-serif;
+        margin-top: 10px;
+        text-align: center;
+        padding: 5px;
+    }
+
     .cookies {
         font-family: Capriola, sans-serif;
         position: fixed;
