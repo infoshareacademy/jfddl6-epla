@@ -16,6 +16,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animate.css">
 </head>
 
 <body class='body'>
@@ -174,6 +175,28 @@
         </div>
     </section>
 
+    <section class="sections section-calculator">
+        <div class="calculator-wrapper">
+            <h1 class="calculator-wrapper__title">Account price calculator</h1>
+            <form class="calculator">
+                <div class="calculator__row calculator__slider">
+                    <label for="number-of-accounts" >Number of accounts: </label>
+                    <input type="range" min="1" max="40" value="0" step="1" class="calculator__slider-number" required />
+                    <span class="calculator__slider-output"></span>
+                </div>
+                <div class="calculator__row calculator__account-type">
+                    <label for="account-type">Type of account:</label> <br />
+                    <input type="radio" class="account-type-regular" name="type" value="regular-user" checked/> <span>Regular user</span>
+                    <br>
+                    <input type="radio" class="account-type-business" name="type" value="business-user" /> <span>Business user</span>
+                </div>
+                <div class="calculator__row calculator__result">
+                    <h2 class="calculator__result-info">Final price: <span class="calculator__result-number"></span></h2>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <section id="team" class="sections section-team">
         <div class="section-team-header">
 
@@ -227,12 +250,15 @@
         <h3 class="section-sign-up__header">If you're interested in our application, you can leave us your email
             address and we will let you know when our application is published.</h3>
         <form action="https://emaillabs-sender.herokuapp.com/" method="POST" class="newsletter-form">
-            <input type="text" name="emails[]" placeholder="Enter your email address" class="newsletter-form__input-email">
+            <input type="text" name="emails[]" placeholder="Enter your email address" class="newsletter-form__input-email"
+                type="email" required>
             <input type="hidden" name="subject" value="Thank you for signing up!">
-            <input type="hidden" name="message" value="Dear customer, \n thank you for signing up for our app's premiere. We will inform you once the app is launched, stay tuned! \n yours truly ePla team">
+            <input type="hidden" name="message" value="Dear customer,
+            thank you for signing up for our app's premiere. We will inform you once the app is launched, stay tuned!
+            yours truly ePla team">
             <input type="hidden" name="from" value="contactepla@gmail.com">
             <input type="hidden" name="fromName" value="ePla">
-            <input type="hidden" name="redirect" value="thankYou.html">
+            <input type="hidden" name="redirect" value="http://www.epla.jfddl6.is-academy.pl/thankYou.html">
             <input class="button newsletter-form__input-submit" type="submit" value="Send!">
         </form>
         <p class="section-sign-up__no-spam">Don't worry we won't send you any unwanted spam. We'll only send you one
@@ -260,6 +286,8 @@
     <script src="./js/cookies.js"></script>
     <script src="./js/hamburger.js"></script>
     <script src="./js/carousel.js"></script>
+    <script src="./js/calculator.js"></script>
+    <script src="./js/animated-photos.js"></script>
 </body>
 
 </html>
