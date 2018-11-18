@@ -563,6 +563,12 @@
     display: none;
 }
 
+.game-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -573,7 +579,7 @@
     font-weight: bold;
     padding: 3px 20px;
     margin-top: 10px;
-    background-color: red;
+    background-color: blue;
     color: white;
 }
 
@@ -584,6 +590,12 @@
 
 .button-right {
     margin-left: 10px;
+}
+
+.game-instruction {
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
 }
 
 @media only screen and (min-width:576px) {

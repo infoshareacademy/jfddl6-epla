@@ -39,6 +39,8 @@ class Game {
         this.timeToSpeedUp = 10000
         this.level = 0
 
+        this.gameFlexContainer = document.querySelector('.game-flex-container')
+        this.instructionContainer = document.querySelector('.game-instruction')
         this.buttonsContainer = document.querySelector('.buttons-container')
         this.startGameButton = document.querySelector('.start-game-button')
 
@@ -47,6 +49,7 @@ class Game {
 
     init() {
         this.startGameButton.addEventListener('click', () => {
+            this.gameFlexContainer.removeChild(this.instructionContainer)
             this.startGameInterval()
             this.deleteStartButton()
             this.createArrowButtons()
