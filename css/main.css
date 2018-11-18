@@ -563,6 +563,29 @@
     display: none;
 }
 
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+}
+
+.button {
+    font-weight: bold;
+    padding: 3px 20px;
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+}
+
+.start-game-button {
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.button-right {
+    margin-left: 10px;
+}
+
 @media only screen and (min-width:576px) {
     .carousel__item-header {
         margin-top: 30vh;

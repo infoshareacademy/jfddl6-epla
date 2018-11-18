@@ -39,22 +39,41 @@ class Game {
         this.timeToSpeedUp = 10000
         this.level = 0
 
+        this.buttonsContainer = document.querySelector('.buttons-container')
+        this.startGameButton = document.querySelector('.start-game-button')
+
         this.init()
     }
 
     init() {
+        this.startGameButton.addEventListener('click', () => {
+            this.startGameInterval()
+            this.deleteStartButton()
+            this.createArrowButtons()
+        })
         this.startListeningToArrows()
         this.render()
-        this.startGameInterval()
+    }
 
-        alert(`    Event racer!
-    Press left and right arrows to move and avoid
-    obstacles that appear in your path.
-    Get points with passing time.
-    Reach higher difficulty levels.
-    Beat your own high score and get as far as you can!
+    deleteStartButton(){
+        this.buttonsContainer.removeChild(this.startGameButton)
+    }
 
-    Press ok to play!`)
+    createArrowButtons() {
+        const buttonLeft = document.createElement('button')
+        const buttonRight = document.createElement('button')
+
+        buttonLeft.innerText = '<--'
+        buttonRight.innerText = '-->'
+
+        buttonLeft.setAttribute("class", "button button-left")
+        buttonRight.setAttribute("class", "button button-right")
+
+        buttonLeft.addEventListener('click', () => this.checkIfMoveIsAvailable(-1, 0))
+        buttonRight.addEventListener('click', () => this.checkIfMoveIsAvailable(1, 0))
+
+        this.buttonsContainer.appendChild(buttonLeft)
+        this.buttonsContainer.appendChild(buttonRight)
     }
 
     render() {
