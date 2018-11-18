@@ -86,7 +86,7 @@ class Game {
         this.composeBoard()
         this.boardContainer.forEach((row, i) => {
             const rowDiv = document.createElement('div')
-            rowDiv.style.height = '9vw'
+            rowDiv.style.height = '6vh'
 
             row.forEach((cell, j) => {
                 this.renderSingleCell(cell, rowDiv)
@@ -99,8 +99,8 @@ class Game {
         const cellDiv = document.createElement('div')
 
         cellDiv.style.display = "inline-block"
-        cellDiv.style.width = '9vw'
-        cellDiv.style.height = '9vw'
+        cellDiv.style.width = '6vh'
+        cellDiv.style.height = '6vh'
 
         if (cell === 0) cellDiv.style.backgroundColor = 'green'
         if (cell === 1) cellDiv.style.backgroundColor = 'rgb(242, 242, 242)'

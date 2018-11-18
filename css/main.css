@@ -572,7 +572,6 @@
 .buttons-container {
     display: flex;
     justify-content: center;
-    width: 35%;
 }
 
 .button {
