@@ -39,23 +39,44 @@ class Game {
         this.timeToSpeedUp = 10000
         this.level = 0
 
+        this.gameFlexContainer = document.querySelector('.game-flex-container')
+        this.instructionContainer = document.querySelector('.game-instruction')
+        this.buttonsContainer = document.querySelector('.buttons-container')
+        this.startGameButton = document.querySelector('.start-game-button')
+
         this.init()
     }
 
     init() {
+        this.startGameButton.addEventListener('click', () => {
+            this.gameFlexContainer.removeChild(this.instructionContainer)
+            this.startGameInterval()
+            this.deleteStartButton()
+            this.createArrowButtons()
+        })
         this.startListeningToArrows()
         this.render()
-        this.startGameInterval()
-
-        alert(`    Event racer!
-    Press left and right arrows to move and avoid
-    obstacles that appear in your path.
-    Get points with passing time.
-    Reach higher difficulty levels.
-    Beat your own high score and get as far as you can!
-
-    Press ok to play!`)
     }
+
+    deleteStartButton(){
+        this.buttonsContainer.removeChild(this.startGameButton)
+    }
+
+    createArrowButtons() {
+        const buttonLeft = document.createElement('button')
+        const buttonRight = document.createElement('button')
+
+        buttonLeft.innerText = '<--'
+        buttonRight.innerText = '-->'
+         buttonLeft.setAttribute("class", "button button-left")
+        buttonRight.setAttribute("class", "button button-right")
+         buttonLeft.addEventListener('click', () => this.checkIfMoveIsAvailable(-1, 0))
+        buttonRight.addEventListener('click', () => this.checkIfMoveIsAvailable(1, 0))
+         this.buttonsContainer.appendChild(buttonLeft)
+        this.buttonsContainer.appendChild(buttonRight)
+    }
+
+
 
     render() {
 
@@ -65,7 +86,7 @@ class Game {
         this.composeBoard()
         this.boardContainer.forEach((row, i) => {
             const rowDiv = document.createElement('div')
-            rowDiv.style.height = '9vh'
+            rowDiv.style.height = '6vh'
 
             row.forEach((cell, j) => {
                 this.renderSingleCell(cell, rowDiv)
@@ -78,8 +99,8 @@ class Game {
         const cellDiv = document.createElement('div')
 
         cellDiv.style.display = "inline-block"
-        cellDiv.style.width = '9vh'
-        cellDiv.style.height = '9vh'
+        cellDiv.style.width = '6vh'
+        cellDiv.style.height = '6vh'
 
         if (cell === 0) cellDiv.style.backgroundImage = "url('./img/snowmanf.png')"
         if (cell === 1) cellDiv.style.backgroundColor = 'rgb(242, 242, 242)'
