@@ -481,7 +481,7 @@
 .section-sign-up {
     margin: 0 auto;
     background-color: #0a3d62;
-    padding: 10px;
+    padding: 40px 10px 40px 10px;
     border-top: 1px solid black;
     display: flex;
     flex-direction: column;
